@@ -4,15 +4,14 @@ namespace TestProject
 {
     public class UnitTest1
     {
-        [Fact]
-        public void Add_Test()
+        [Theory]
+        [InlineData("1\n2,3", 6)]
+        [InlineData("1,2,3", 6)]    
+        public void SupportDifferentDelimiters_Test(string nums, int expected)
         {
-            //Arrange 
-            int expected = 10;
-
             //Act
             var numbers = new StringCalculatorService();
-            int actual = numbers.Add("2,3,4,1");
+            int actual = numbers.Add(nums);
 
             //Assert
             Assert.Equal(expected, actual);
