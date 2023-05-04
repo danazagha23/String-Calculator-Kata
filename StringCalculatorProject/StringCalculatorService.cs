@@ -23,7 +23,6 @@ namespace StringCalculatorKata
 
             bool existNegativeNumbers = false;
             List<int> negativeNums = new List<int>();
-
             int sum = 0;
             foreach (string s in ints)
             {
@@ -33,7 +32,7 @@ namespace StringCalculatorKata
                 {
                     negativeNums.Add(num);
                 }
-                sum += num;
+                sum += num <= 1000 ? num : 0;
             }
             if (negativeNums.Count > 0)
             {
