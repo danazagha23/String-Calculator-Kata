@@ -22,4 +22,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\StringCalculatorProject\StringCalculatorProject.csproj" />
+  </ItemGroup>
+
 </Project>
