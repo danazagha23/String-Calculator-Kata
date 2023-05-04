@@ -7,7 +7,7 @@ namespace StringCalculatorKata
     {
         public static void Main(string[] args)
         {
-            string numbers = "//;\n4;1";
+            string numbers = "//;\n4;10000";
 
             var sc = new StringCalculatorService();
 

@@ -18,6 +18,7 @@ namespace TestProject
 
         [Theory]
         [InlineData("//;\n2;3;1;5", 11)]
+        [InlineData("//;\n2;1001", 2)]      //ignore big numbers
         public void SupportDifferentDelimiters_Test(string nums, int expected)
         {
             //Act
