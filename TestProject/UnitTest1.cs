@@ -8,11 +8,11 @@ namespace TestProject
         public void Add_Test()
         {
             //Arrange 
-            int expected = 5;
+            int expected = 10;
 
             //Act
             var numbers = new StringCalculatorService();
-            int actual = numbers.Add("2,3");
+            int actual = numbers.Add("2,3,4,1");
 
             //Assert
             Assert.Equal(expected, actual);
