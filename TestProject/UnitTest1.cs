@@ -4,6 +4,18 @@ namespace TestProject
 {
     public class UnitTest1
     {
+
+        [Fact]
+        public void NegativeNumbers_Test()
+        {
+            var numbers = new StringCalculatorService();
+
+            var exception = Assert.Throws<Exception>(() => numbers.Add("-2,4,5"));
+
+            //Assert
+            Assert.Equal("negatives not allowed: -2", exception.Message);
+        }
+
         [Theory]
         [InlineData("//;\n2;3;1;5", 11)]
         public void SupportDifferentDelimiters_Test(string nums, int expected)
